@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "strict": true,
+    "forceConsistentCasingInFileNames": true,
     "jsx": "react-native",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true
