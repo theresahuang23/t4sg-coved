@@ -1,6 +1,7 @@
 # Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
 
 # dependencies
+node_modules/
 
 # Expo
 .expo/
@@ -28,6 +29,11 @@ yarn-error.*
 *.pem
 
 # local env files
+.env*.local
+
+# local env files
+# do not commit any .env files to git, except for the .env.example file. https://create.t3.gg/en/usage/env-variables#using-environment-variables
+.env
 .env*.local
 
 # typescript
