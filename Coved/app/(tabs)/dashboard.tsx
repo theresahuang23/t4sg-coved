@@ -37,7 +37,7 @@ export default function DashboardScreen() {
                     color="#007bff"
                 />
             </View>
-            <EditScreenInfo path="app/(tabs)/dashboard.tsx" />
+            {/* <EditScreenInfo path="app/(tabs)/dashboard.tsx" /> */}
         </View>
     );
 }
