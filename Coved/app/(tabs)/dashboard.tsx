@@ -4,8 +4,11 @@ import { Text, View } from '../../components/Themed';
 import { Image, Button } from 'react-native';
 
 
+
 export default function DashboardScreen() {
+   
     return (
+        
         <View style={styles.container}>
             {/* Welcome text */}
             <Text style={styles.title}>Dashboard</Text>
