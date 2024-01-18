@@ -3,8 +3,16 @@ module.exports = function (api) {
   return {
     presets: ['babel-preset-expo'],
     plugins: [
-      // Required for expo-router
-      'expo-router/babel',
-    ],
+      // If "expo-router/babel" requires no configuration, just list it by name
+      "expo-router/babel",
+      // For "react-native-dotenv", use an array with the plugin name and its configuration
+      [
+        "module:react-native-dotenv",
+        {
+          moduleName: "@env",
+          path: ".env",
+        }
+      ]
+    ]
   };
 };

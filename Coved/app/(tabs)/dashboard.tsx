@@ -2,17 +2,26 @@ import { StyleSheet } from 'react-native';
 import EditScreenInfo from '../../components/EditScreenInfo';
 import { Text, View } from '../../components/Themed';
 import { Image, Button } from 'react-native';
+import { db } from '../../firebaseConfig';
+import { collection, query, where, getDocs } from 'firebase/firestore';
+import React, { useEffect, useState } from 'react';
+import { doc, getDoc } from 'firebase/firestore';
 
 
 
 export default function DashboardScreen() {
-   
+    const [menteeBio, setMenteeBio] = useState('');
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState('');
+
+    
     return (
         
         <View style={styles.container}>
             {/* Welcome text */}
             <Text style={styles.title}>Dashboard</Text>
             <Text style={styles.welcomeText}>Welcome!</Text>
+            <Text style={styles.welcomeText}>Bio: </Text>
             <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
             {/* Matched with section */}
             <View style={styles.matchContainer}>
